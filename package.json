@@ -2,10 +2,10 @@
   "name": "react-server-postgres",
   "version": "1.0.0",
   "description": "This is the server for running the postgres database that houses the store products",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/ymclapp/react-server-postgres#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "node": "^17.4.0"
+    "node": "^17.4.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.16.1"
   }
 }
