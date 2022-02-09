@@ -11,7 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const pg = require('pg');
-const db = require('db');
+const db = require('./app/models');
+
+
+//drop existing tables and re-sync database during development
+// db.sequelize.sync({ force: true }).then(() => {
+//     console.log("Drop and re-sync db.");
+//   });
 
 //routes
 app.get('/', (request, response) => {
