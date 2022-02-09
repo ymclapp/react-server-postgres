@@ -1,16 +1,16 @@
 module.exports = (sequelize, Sequelize) => {
     const Product = sequelize.define('product', {
         title:  {
-            type:  Sequelize.STRING
+            type:  Sequelize.STRING(500)
         },
         description:  {
-            type:  Sequelize.STRING
+            type:  Sequelize.STRING(1000)
         },
         image:  {
-            type:  Sequelize.BLOB
+            type:  Sequelize.STRING
         },
         release_date:  {
-            type:  Sequelize.DATEONLY
+            type:  Sequelize.STRING
         },
         type:  {
             type:  Sequelize.STRING

@@ -6,7 +6,11 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-app.use(cors());
+var corsOptions = {
+    origin: "http://localhost:3001"
+}
+app.use(cors(corsOptions));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -25,10 +29,9 @@ app.get('/', (request, response) => {
 });
 
 app.get('*'), (request, response) =>
-  response.status(404).send('This route does not exist');
+    response.status(404).send('This route does not exist');
 
-
-
+require('./app/routes/product.routes')(app);
 
 const PORT = process.env.PORT || 3001;
 
