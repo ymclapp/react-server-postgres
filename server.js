@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const pg = require('pg');
-//const db = require('db');
+const db = require('db');
 
 //routes
 app.get('/', (request, response) => {

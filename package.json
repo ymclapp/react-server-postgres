@@ -11,8 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/ymclapp/react-server-postgres.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "rest",
+    "api",
+    "postgresql"
+  ],
+  "author": "Yvette Clapp",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ymclapp/react-server-postgres/issues"
