@@ -40,7 +40,7 @@ exports.findAll = (request, response) => {
     const title = request.query.title;
     var condition = title ? {title:  { [Op.iLike]: `%${title}%`} } : null;
 
-    Product.findAll({ where:  conditon })
+    Product.findAll({ where:  condition })
     .then(data => {
         response.send(data);
     })
